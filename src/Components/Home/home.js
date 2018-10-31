@@ -24,18 +24,22 @@ export default class Home extends Component {
   }
 
   onChange(event) {
+    // Handles change of value of the input. This is the only way to handle it with React.
     this.setState({searchParam: event.target.value});
   }
 
   onSubmit() {
+    // Handles when user submits the search. Changes redirect to TRUE, so next time render is excuted it will redirect to Search component
    this.setState({redirect: true})
   }
 
   render() {
     const { redirect, searchParam } = this.state;
+    // Checks if user submitted the search query. If true redirects to Search component
     if(redirect) {
       return <Redirect push to={"/search?query="+searchParam+"?page=1"} />;
     }
+  // If not, renders this component normally
     return (
         <div className="front-page">
           <p> Do you want to find an airport? </p>

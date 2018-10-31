@@ -1,13 +1,23 @@
 body {
+	position: absolute;
 	background-color: #ebedff;
 	height: 100%;
 	width: 100%;
 	margin: 0;
+	min-height: 900px;
 }
 
 input {
 	width: 300px;
 }
+
+#root {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+/* Home compoment */
 
 .front-page {
 	position: relative;
@@ -24,6 +34,8 @@ input {
 	width: 15px;
 	height: auto;
 }
+
+/* NavBar component */
 
 nav {
 	height: 50px;
@@ -52,6 +64,26 @@ nav img {
 	height: 30px;
 	width: auto;
 }
+
+/* footer */
+
+footer {
+	position: absolute;
+	background-color: rgb(76, 76, 76);
+	height: 25px;
+	width: 100%;
+	bottom: 0;
+	color: white;
+	text-align: right;
+}
+
+footer div {
+	position: relative;
+	margin-right: 10px;
+	top: 15%;
+}
+
+/* Search component */
 
 .results-display {
 	width: 80%;
@@ -86,3 +118,13 @@ nav img {
 	width: auto;
 }
 
+.no-results {
+	position: relative;
+	margin: 0;
+	text-align: center;
+	font-size: 20px;
+	top: 200px;
+}
+.error-404 {
+	font-size: 50px;
+}
