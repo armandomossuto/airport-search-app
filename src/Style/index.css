@@ -99,6 +99,9 @@ footer div {
 .results {
 	display: flex;
 	flex-direction: column;
+	min-height: 900px;
+	width: 100%;
+
 }
 
 .results > p {
@@ -163,11 +166,15 @@ footer div {
 
 /* All the other messages/components in search.js */
 .no-results {
-	position: relative;
 	margin: auto;
 	text-align: center;
 	font-size: 20px;
-	top: 200px;
+	display: flex;
+	flex-direction: column;
+}
+
+.no-results > p:first-child {
+	margin-top: 200px;
 }
 
 .no-results > div {

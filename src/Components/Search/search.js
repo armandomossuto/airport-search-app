@@ -71,7 +71,8 @@ export default class Search extends Component {
     //If fetch request is OK, we need to convert the data retrieved to the format compatible with our APP
 
     // In case query is more than one word, we are going to separete them. We will create an array with each separate word
-    let words = query.split("%20");
+    let words = query.split(/%20| /);
+    
     // We are introducing MARK tag between any match with the term searched by the user
     // In order to perform this task, we are using a regular expression
     let result = data;
@@ -125,6 +126,9 @@ export default class Search extends Component {
     // We need to parse again Page value from URL and use it to update resultstoShow and Page in internal state
     const { page, searchResults } = this.state;
     const parsePage = /\?page=(.*)/;
+    if (parsePage.exec(this.props.history.location.search) === null) {
+      return (this.setState({ status: 'bad_request' }));
+    }
     const newpage =  parsePage.exec(this.props.history.location.search)[0].replace("?page=","");
     
     let resultstoShow = searchResults.slice(((newpage-1)*12),((newpage-1)*12)+12);
