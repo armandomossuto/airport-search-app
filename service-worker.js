@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/airport-search-app/precache-manifest.faaab852e23f25aace30c8ed0ab8e6fc.js"
+  "/airport-search-app/precache-manifest.b01790002657ec8a1938b618207f094b.js"
 );
 
 workbox.clientsClaim();
