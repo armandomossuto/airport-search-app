@@ -16,6 +16,7 @@ body {
 #root > div {
 	display: flex;
 	flex-direction: column;
+	height: auto;
 }
 
 /* Home compoment */
@@ -76,11 +77,10 @@ nav img {
 /* footer */
 
 footer {
-	position: absolute;
 	background-color: rgb(76, 76, 76);
 	height: 25px;
 	width: 100%;
-	bottom: 0;
+	margin-top: 20px;
 	color: white;
 	text-align: right;
 }
@@ -94,6 +94,12 @@ footer div {
 /* Search component */
 
 /* results_display */
+
+.results {
+	display: flex;
+	flex-direction: column;
+}
+
 .results > p {
 	position: relative;
 	font-size: 24px;

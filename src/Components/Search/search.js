@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router';
 import ErrorMessage from './error_message';
 import NoResults from './no_results';
 import ResultsDisplay from './results_display';
@@ -47,7 +46,7 @@ export default class Search extends Component {
     }
     const query = urlParams[1];
     let status = '';
-    const URL = 'https://embed-staging.nezasa.com/api1/airports?query='+ query + '&useCOResponse=true&contentLang=en';
+    const URL = 'https://cors-anywhere.herokuapp.com/https://embed-staging.nezasa.com/api1/airports?query='+ query + '&useCOResponse=true&contentLang=en';
     console.log(URL);
     // fetch used to retrieve data from web API
     fetch(URL)
