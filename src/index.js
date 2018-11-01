@@ -9,7 +9,7 @@ import NavBar from './Components/NavBar/navbar.js'
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div>
           <NavBar />
           <Route exact path="/" component={Home} />

@@ -16,6 +16,7 @@ body {
 #root > div {
 	display: flex;
 	flex-direction: column;
+	min-height: 900px;
 	height: auto;
 }
 
